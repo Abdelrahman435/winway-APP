@@ -38,8 +38,8 @@ const passport = require('passport');
 
 
 router.get('/', passport.authenticate('facebook', {
-    successRedirect: "http://localhost:3000/signup/facebook",
-    failureRedirect: "http://localhost:3000/login/failed",
+    successRedirect: "https://winway-app-lytn.onrender.com/signup/facebook",
+    failureRedirect: "https://winway-app-lytn.onrender.com/login/failed",
 })
 );
 
