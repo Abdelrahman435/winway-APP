@@ -224,7 +224,7 @@ async function postSignupFacebook(req, res) {
         lastname: req.user.name.familyName,
         email: req.user.id,
         image: req.user.photos[0].value,
-        password: "No password for gmail users...",
+        password: "No password for facebook users...",
       };
       const id = await getId(obj.email);
       const token = await jwt.sign({userId: id}, process.env.JWT_SECRET_KEY, {
