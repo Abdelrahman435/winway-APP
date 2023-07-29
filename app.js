@@ -20,8 +20,6 @@ const facebookAuth = require('./routes/facebookAuth');
 const login = require('./routes/login');
 const resetPassword = require('./routes/forgotPassword');
 const home = require('./routes/home');
-var chat = require('./routes/chat');
-
 
 
 var app = express();
@@ -80,7 +78,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('static',express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static("upload"));
 
 app.use('/', homeRouter);
@@ -91,8 +89,6 @@ app.use('/facebook', facebookAuth);
 app.use('/login', login);
 app.use('/resetPassword', resetPassword);
 app.use('/home', home);
-app.use('/chat', chat);
-
 
 //test2
 
