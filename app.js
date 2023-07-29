@@ -22,7 +22,6 @@ const resetPassword = require('./routes/forgotPassword');
 const home = require('./routes/home');
 
 
-
 var app = express();
 
 
@@ -90,7 +89,6 @@ app.use('/facebook', facebookAuth);
 app.use('/login', login);
 app.use('/resetPassword', resetPassword);
 app.use('/home', home);
-
 
 //test
 
