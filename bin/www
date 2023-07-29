@@ -8,6 +8,8 @@ var app = require('../app');
 var debug = require('debug')('winway-app:server');
 var http = require('http');
 
+
+
 /**
  * Get port from environment and store in Express.
  */
@@ -20,6 +22,34 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+
+
+/**
+ * socket io for chat
+ */
+
+const io = require('socket.io')(server, {
+  cors: {
+      origin: '*',
+  }
+});
+
+const users = {}
+
+io.on('connection', socket => {
+  socket.on('new-user', name => {
+    users[socket.id] = name
+    socket.broadcast.emit('user-connected', name)
+  })
+  socket.on('send-chat-message', message => {
+    socket.broadcast.emit('chat-message', { message: message, name: users[socket.id] })
+  })
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('user-disconnected', users[socket.id])
+    delete users[socket.id]
+  })
+})
+
 
 /**
  * Listen on provided port, on all network interfaces.
