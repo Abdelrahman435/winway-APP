@@ -94,7 +94,7 @@ app.use('/home', home);
 app.use('/chat', chat);
 
 
-//test
+//test2
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
