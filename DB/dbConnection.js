@@ -1,35 +1,35 @@
 const mysql = require("mysql");
 
-// const db_config = {
-//   host: "bykoxpxsybzqzwzbmww8-mysql.services.clever-cloud.com",
-//   user: "u4ptjd6izxqtlgbq",
-//   password: "rQq9qDfi7NrQAFtGg1LW",
-//   database: "bykoxpxsybzqzwzbmww8",
-//   port: "3306",
-// };
-
-// let connection = mysql.createConnection({
-//   host: "bykoxpxsybzqzwzbmww8-mysql.services.clever-cloud.com",
-//   user: "u4ptjd6izxqtlgbq",
-//   password: "rQq9qDfi7NrQAFtGg1LW",
-//   database: "bykoxpxsybzqzwzbmww8",
-//   port: "3306",
-// });
+const db_config = {
+  host: "bykoxpxsybzqzwzbmww8-mysql.services.clever-cloud.com",
+  user: "u4ptjd6izxqtlgbq",
+  password: "rQq9qDfi7NrQAFtGg1LW",
+  database: "bykoxpxsybzqzwzbmww8",
+  port: "3306",
+};
 
 let connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "db",
+  host: "bykoxpxsybzqzwzbmww8-mysql.services.clever-cloud.com",
+  user: "u4ptjd6izxqtlgbq",
+  password: "rQq9qDfi7NrQAFtGg1LW",
+  database: "bykoxpxsybzqzwzbmww8",
   port: "3306",
 });
 
+// let connection = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "",
+//   database: "db",
+//   port: "3306",
+// });
+
 function handleDisconnect() {
   connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "db",
+    host: "bykoxpxsybzqzwzbmww8-mysql.services.clever-cloud.com",
+    user: "u4ptjd6izxqtlgbq",
+    password: "rQq9qDfi7NrQAFtGg1LW",
+    database: "bykoxpxsybzqzwzbmww8",
     port: "3306",
   });
   connection.connect((err) => {
