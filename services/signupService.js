@@ -1,4 +1,4 @@
-const {connection} = require('../db/dbConnection');
+const {connection} = require('../DB/dbConnection');
 const util = require('util');
 
 async function getEmail(email){
