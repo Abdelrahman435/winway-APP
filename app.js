@@ -90,6 +90,7 @@ app.use('/login', login);
 app.use('/resetPassword', resetPassword);
 app.use('/home', home);
 
+//test
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
