@@ -40,7 +40,7 @@ async function showTopCourses(req, res, next) {
     const courses = await getTopCourses();
     if (courses.length > 0) {
       courses.map((course) => {
-        course.image = "http://" + req.hostname + ":3000/" + course.image;
+        course.image = "http://" + req.hostname + course.image;
       });
       res.status(200).json(courses);
     } else {
