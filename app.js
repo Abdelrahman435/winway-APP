@@ -21,6 +21,7 @@ const login = require('./routes/login');
 const resetPassword = require('./routes/forgotPassword');
 const home = require('./routes/home');
 var chat = require('./routes/chat');
+var playCourse = require('./routes/playCourse');
 
 
 
@@ -92,6 +93,7 @@ app.use('/login', login);
 app.use('/resetPassword', resetPassword);
 app.use('/home', home);
 app.use('/chat', chat);
+app.use('/playCourse', playCourse);
 
 
 //test2
