@@ -19,6 +19,7 @@ const verify = require('./routes/verifyOTP');
 const facebookAuth = require('./routes/facebookAuth');
 const login = require('./routes/login');
 const resetPassword = require('./routes/forgotPassword');
+const home = require('./routes/home');
 
 
 var app = express();
@@ -87,6 +88,7 @@ app.use('/verify', verify);
 app.use('/facebook', facebookAuth);
 app.use('/login', login);
 app.use('/resetPassword', resetPassword);
+app.use('/home', home);
 
 
 // catch 404 and forward to error handler
