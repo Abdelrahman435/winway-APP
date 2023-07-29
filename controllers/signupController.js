@@ -81,7 +81,7 @@ async function postSignup(req, res) {
       const d = new Date;
       d.setMinutes(d.getMinutes());
       const d2 = new Date;
-      d2.setMinutes(d2.getMinutes()+1);
+      d2.setMinutes(d2.getMinutes()+2);
         
       let obj2 = {
         otp: otp,
@@ -159,7 +159,7 @@ async function resendOTP(req,res){
 }
 
 async function signUpGmail(req,res){
-  res.redirect('https://localhost:3000/auth/google');
+  res.redirect('https://winway-app-lytn.onrender.com/auth/google');
 }
 
 
