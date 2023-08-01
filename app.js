@@ -22,7 +22,7 @@ const resetPassword = require('./routes/forgotPassword');
 const home = require('./routes/home');
 var chat = require('./routes/chat');
 var playCourse = require('./routes/playCourse');
-
+const quizs = require('./routes/quiz')
 
 
 var app = express();
@@ -94,7 +94,7 @@ app.use('/resetPassword', resetPassword);
 app.use('/home', home);
 app.use('/chat', chat);
 app.use('/playCourse', playCourse);
-
+app.use('/quizs',quizs)
 
 //test2
 
