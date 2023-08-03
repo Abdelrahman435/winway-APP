@@ -6,8 +6,8 @@ const {
   createQuiz,
   deleteQuiz,
   showquizs,
-} = require("../services/quizService");
-const{getCourseById} = require('../services/coursesServices')
+} = require("../services/quizServices");
+const{getCourseById} = require('../services/coursesService')
 
 async function update(req, res) {
   try {

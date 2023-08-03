@@ -1,5 +1,5 @@
 const util = require("util");
-const { connection } = require("../db/dbConnection");
+const { connection } = require("../DB/dbConnection");
 
 async function getQuizById(id) {
   const query = util.promisify(connection.query).bind(connection);

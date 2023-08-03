@@ -23,6 +23,7 @@ const home = require('./routes/home');
 var chat = require('./routes/chat');
 var playCourse = require('./routes/playCourse');
 const quizs = require('./routes/quiz')
+const search = require('./routes/search');
 
 
 var app = express();
@@ -95,6 +96,7 @@ app.use('/home', home);
 app.use('/chat', chat);
 app.use('/playCourse', playCourse);
 app.use('/quizs',quizs)
+app.use('/search',search)
 
 //test2
 
